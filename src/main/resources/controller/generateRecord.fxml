@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="root" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="20.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pan.controller.dialog.GenerateRecordDialog">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" />
+    <ColumnConstraints hgrow="SOMETIMES" prefWidth="200.0" />
+  </columnConstraints>
+
+   <children>
+      <Label text="生成方式" />
+      <Label text="卡片内码" GridPane.rowIndex="1" />
+      <Label text="生成数量" GridPane.rowIndex="3" />
+      <TextField fx:id="text_card" disable="true" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <HBox spacing="10.0" GridPane.columnIndex="1">
+         <children>
+            <RadioButton fx:id="radio_auto" mnemonicParsing="false" onAction="#action_auto" selected="true" text="自动">
+               <toggleGroup>
+                  <ToggleGroup fx:id="type" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radio_hand" mnemonicParsing="false" onAction="#action_hand" text="手动" toggleGroup="$type" />
+         </children>
+      </HBox>
+      <Slider fx:id="slider_number" majorTickUnit="200.0" max="1000.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="刷卡事件" GridPane.rowIndex="2" />
+      <ComboBox fx:id="eventType" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

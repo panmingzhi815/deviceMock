@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="root" fx:controller="org.pan.controller.dialog.DeviceDetailDialog" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+  <columnConstraints>
+    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" />
+    <ColumnConstraints hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+    <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+    <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="名称" />
+      <Label text="地址" GridPane.rowIndex="1" />
+      <Label text="类型" GridPane.rowIndex="2" />
+      <TextField fx:id="name" prefWidth="200.0" GridPane.columnIndex="1" />
+      <TextField fx:id="address" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ComboBox fx:id="type" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</GridPane>
